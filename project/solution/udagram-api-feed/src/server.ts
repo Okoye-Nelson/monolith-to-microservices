@@ -16,15 +16,29 @@ const c = config;
 
   const app = express();
   const port = process.env.PORT || 8080;
-  
-  app.use(bodyParser.json());
 
+  // Enable All CORS Requests
+  app.use(cors())
+  
+  /*
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, X-Access-Token, Authorization");
+    res.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, POST, OPTIONS, PUT, PATCH, DELETE');
+    //res.header("Access-Control-Allow-Origin", "http://localhost:8100");
+    next();
+  });
+  */
+ 
+  /*
   app.use(cors({
     allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token", "Authorization"],
     methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
     origin: c.url
   }));
+  */
 
+  app.use(bodyParser.json());
   app.use('/api/v0/', IndexRouter);
 
   // Root URI call

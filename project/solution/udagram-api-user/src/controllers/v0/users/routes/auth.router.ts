@@ -12,7 +12,6 @@ import { config } from 'bluebird';
 
 const router: Router = Router();
 
-
 async function generatePassword(plainTextPassword: string): Promise<string> {
     const saltRounds = 10;
     let salt = await bcrypt.genSalt(saltRounds);
