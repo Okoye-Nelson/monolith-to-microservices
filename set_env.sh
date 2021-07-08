@@ -8,4 +8,4 @@ export AWS_BUCKET=test-nd9990-dev-wc
 export AWS_REGION=us-east-1
 export AWS_PROFILE=nd9990
 export JWT_SECRET=hello
-export URL=http://localhost:8100
+export URL=http://10.100.89.219:8100
