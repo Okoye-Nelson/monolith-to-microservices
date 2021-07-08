@@ -287,10 +287,7 @@ Create two new directories (as services) with the names above. Copy the backend 
 ├── Dockerfile       # TODO: Create NEW, and common
 ├── .gitignore       # Common and no change
 ├── .dockerignore    # TODO: Add "node_modules" to this file
-├── .eslintrc.json   # Common and no change
-├── tsconfig.json    # Common and no change
-└── tslint.json      # Common and no change
-
+└── migrations       # TODO: Remove the JSON related to other (either feed or users) service  
 ```
 
 The Dockerfile for the above two backend services will be like:

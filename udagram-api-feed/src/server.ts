@@ -51,6 +51,9 @@ const c = config;
     res.send( "/api/v0/" );
   } );
 
+  app.get("/health", (req, res) => {
+    res.status(200).send("udagram-api-feed Alive");
+  });
 
   // Start the Server
   app.listen( port, () => {
