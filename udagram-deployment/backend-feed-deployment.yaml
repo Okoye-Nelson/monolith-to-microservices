@@ -17,7 +17,9 @@ spec:
       containers:
       - image: sudkul/udagram-api-feed:v3
         name: backend-feed
-        imagePullPolicy: Always  
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
         resources:
           requests:
             memory: "64Mi"

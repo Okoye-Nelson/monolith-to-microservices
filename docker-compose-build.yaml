@@ -3,16 +3,16 @@ services:
   reverseproxy:
     build:
       context: ./udagram-reverseproxy
-    image: sudkul/reverseproxy:v5
+    image: sudkul/reverseproxy:v3
   backend_user:
     build:
       context: ./udagram-api-user
-    image: sudkul/udagram-api-user:v5
+    image: sudkul/udagram-api-user:v3
   backend_feed:
     build:
       context: ./udagram-api-feed
-    image: sudkul/udagram-api-feed:v5
+    image: sudkul/udagram-api-feed:v3
   frontend:
     build:
       context: ./udagram-frontend
-    image: sudkul/udagram-frontend:v5
+    image: sudkul/udagram-frontend:v3

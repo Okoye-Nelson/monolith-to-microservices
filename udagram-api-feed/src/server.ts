@@ -21,7 +21,7 @@ const c = config;
   app.use(cors({
     allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token", "Authorization"],
     methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-    origin: c.url
+    origin: "*"
   }));
   
   /*
@@ -57,7 +57,7 @@ const c = config;
 
   // Start the Server
   app.listen( port, () => {
-      console.log( `server running ` + c.url );
+      console.log( `Start the Frontend on ` + c.url );
       console.log( `press CTRL+C to stop server` );
   } );
 })();

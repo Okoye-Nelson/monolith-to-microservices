@@ -531,8 +531,13 @@ docker tag <local-image:tag> <dockerhub-username>/<repository>:<tag>
 * Push the images to the Dockerhub. 
 ```bash
 docker login --username=<your-username>
+# Remove unused and dangling images
+docker image prune --all
 # Use the "docker push" command for each image, or 
+# Run this command from the directory where you have the "docker-compose-build.yaml" file present
+docker-compose -f docker-compose-build.yaml build --parallel
 # Use "docker-compose -f docker-compose-build.yaml push" if the names in the compose file are as same as the Dockerhub repositories. 
+docker-compose -f docker-compose-build.yaml push
 ```
 
 
@@ -674,10 +679,10 @@ Then, push your changes to the Github repo. Travis will automatically build and 
 
 ```bash
 kubectl apply -f env-configmap.yaml
-kubectl set image deployment frontend frontend=sudkul/udagram-frontend:v3
-kubectl set image deployment backend-feed backend-feed=sudkul/udagram-api-feed:v3
-kubectl set image deployment backend-user backend-user=sudkul/sudkul/udagram-api-user:v3
-kubectl set image deployment reverseproxy reverseproxy=sudkul/reverseproxy:v3
+kubectl set image deployment frontend frontend=sudkul/udagram-frontend:v2
+kubectl set image deployment backend-feed backend-feed=sudkul/udagram-api-feed:v1
+kubectl set image deployment backend-user backend-user=sudkul/udagram-api-user:v1
+kubectl set image deployment reverseproxy reverseproxy=sudkul/reverseproxy:v2
 ```
 Check your deployed application at the External IP of your frontend deployment. 
 
