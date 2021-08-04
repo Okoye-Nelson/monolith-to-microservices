@@ -15,17 +15,17 @@ spec:
         service: backend-user
     spec:
       containers:
-      - image: sudkul/udagram-api-user:v3
+      - image: sudkul/udagram-api-user:v5
         name: backend-user 
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
         resources:
           requests:
-            memory: "64Mi"
+            memory: "1024Mi"
             cpu: "250m"
           limits:
-            memory: "1024Mi"
+            memory: "8192Mi"
             cpu: "500m"      
         env:
         - name: URL
