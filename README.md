@@ -493,18 +493,18 @@ Use Travis CI pipeline to build and push images to your DockerHub registry.
 ```
 ```bash
 # Tagging
-  - docker tag udagram-api-feed sudkul/udagram-api-feed:v1
-  - docker tag udagram-api-user sudkul/udagram-api-user:v1
-  - docker tag reverseproxy sudkul/reverseproxy:v1
-  - docker tag udagram-frontend sudkul/udagram-frontend:v1
+  - docker tag udagram-api-feed nelhombre/udagram-api-feed:v1
+  - docker tag udagram-api-user nelhombre/udagram-api-user:v1
+  - docker tag reverseproxy nelhombre/reverseproxy:v1
+  - docker tag udagram-frontend nelhombre/udagram-frontend:v1
 ```
 ```bash
 # Push
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push sudkul/udagram-api-feed:v1
-  - docker push sudkul/udagram-api-user:v1
-  - docker push sudkul/reverseproxy:v1
-  - docker push sudkul/udagram-frontend:v1
+  - docker push nelhombre/udagram-api-feed:v1
+  - docker push nelhombre/udagram-api-user:v1
+  - docker push nelhombre/reverseproxy:v1
+  - docker push nelhombre/udagram-frontend:v1
 ```
 > **Tip**: Use different tags each time you push images to the Dockerhub.   
 
@@ -679,10 +679,10 @@ Then, push your changes to the Github repo. Travis will automatically build and 
 
 ```bash
 kubectl apply -f env-configmap.yaml
-kubectl set image deployment frontend frontend=sudkul/udagram-frontend:v2
-kubectl set image deployment backend-feed backend-feed=sudkul/udagram-api-feed:v1
-kubectl set image deployment backend-user backend-user=sudkul/udagram-api-user:v1
-kubectl set image deployment reverseproxy reverseproxy=sudkul/reverseproxy:v2
+kubectl set image deployment frontend frontend=nelhombre/udagram-frontend:v2
+kubectl set image deployment backend-feed backend-feed=nelhombre/udagram-api-feed:v1
+kubectl set image deployment backend-user backend-user=nelhombre/udagram-api-user:v1
+kubectl set image deployment reverseproxy reverseproxy=nelhombre/reverseproxy:v2
 ```
 Check your deployed application at the External IP of your frontend deployment. 
 
