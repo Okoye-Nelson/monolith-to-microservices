@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: nelhombre/reverseproxy:v5
+      - image: nelhombre/reverseproxy:v6
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
