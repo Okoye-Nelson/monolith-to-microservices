@@ -33,3 +33,6 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 node_modules
+kubectl
+aws-iam-authenticator
+aws-iam-authenticator.sha25

@@ -5,7 +5,7 @@ metadata:
     service: backend-user
   name: backend-user
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       service: backend-user
@@ -15,7 +15,7 @@ spec:
         service: backend-user
     spec:
       containers:
-      - image: nelhombre/udagram-api-user:v3
+      - image: nelhombre/udagram-api-user:v1
         name: backend-user 
         imagePullPolicy: Always
         ports:
