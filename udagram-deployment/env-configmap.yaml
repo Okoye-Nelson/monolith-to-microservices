@@ -5,7 +5,7 @@ data:
   AWS_PROFILE: udagram-nelson-dev
   AWS_REGION: us-east-2
   JWT_SECRET: hello
-  POSTGRES_DB: nelson
+  POSTGRES_DB: postgres
   POSTGRES_HOST: nelson.chhnijsxtgst.us-east-2.rds.amazonaws.com
   URL: afa606e0050a44e3e864131a0da6ba60-1489970932.us-east-2.elb.amazonaws.com  
 metadata:
